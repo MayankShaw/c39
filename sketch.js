@@ -68,7 +68,7 @@ function draw() {
   background(255);
   
   kangaroo.x=camera.position.x-270;
-   
+   camera.position.y=kangaroo.y
   if (gameState===PLAY){
 
     jungle.velocityX=-3
@@ -78,9 +78,9 @@ function draw() {
        jungle.x=400
     }
    console.log(kangaroo.y)
-    if(keyDown("space")&& kangaroo.y>270) {
+    if(keyDown("space")&& kangaroo.y>70) {
       jumpSound.play();
-      kangaroo.velocityY = -16;
+      kangaroo.velocityY = -26;
     }
   
     kangaroo.velocityY = kangaroo.velocityY + 0.8
